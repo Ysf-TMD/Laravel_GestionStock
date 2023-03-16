@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('produits.index');
+    return redirect('/produits');
 });
 Route::resource("produits",\App\Http\Controllers\ProduitController::class);

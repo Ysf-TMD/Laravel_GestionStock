@@ -15,6 +15,13 @@
         <p>{{$message}}</p>
     </div>
     @endif
+
+    @if($produits===null)
+
+        <div class="alert alert-warning">
+            Faut ajouter Un produit
+        </div>
+    @else
     <table class="table table-bordered">
         <tr>
             <th>Numéro</th>
@@ -45,10 +52,11 @@
             </tr>
         @endforeach
     </table>
+
     <div class="d-flex justify-content-center pagination-lg">
         {!! $produits->links("pagination::bootstrap-4") !!}
     </div>
-
+@endif
 
 
 @endsection
